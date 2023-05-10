@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	version="4.0">
+
+	<listener>
+		<listener-class>by.grsu.anikevich.danceClub.web.context.AppStartupListener</listener-class>
+	</listener>
+	
+	<servlet>
+		<servlet-name>RoleServlet</servlet-name>
+		<servlet-class>by.grsu.anikevich.danceClub.web.servlet.RoleServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GroupeServlet</servlet-name>
+		<servlet-class>by.grsu.anikevich.danceClub.web.servlet.GroupeServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>PlaceServlet</servlet-name>
+		<servlet-class>by.grsu.anikevich.danceClub.web.servlet.PlaceServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>SectionServlet</servlet-name>
+		<servlet-class>by.grsu.anikevich.danceClub.web.servlet.SectionServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>PersoneServlet</servlet-name>
+		<servlet-class>by.grsu.anikevich.danceClub.web.servlet.PersoneServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>StateServlet</servlet-name>
+		<servlet-class>by.grsu.anikevich.danceClub.web.servlet.StateServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>TrainingServlet</servlet-name>
+		<servlet-class>by.grsu.anikevich.danceClub.web.servlet.TrainingServlet</servlet-class>
+	</servlet>
+	
+	
+	<servlet-mapping>
+		<servlet-name>RoleServlet</servlet-name>
+		<url-pattern>/role</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PersoneServlet</servlet-name>
+		<url-pattern>/persone</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PlaceServlet</servlet-name>
+		<url-pattern>/place</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GroupeServlet</servlet-name>
+		<url-pattern>/groupe</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>StateServlet</servlet-name>
+		<url-pattern>/state</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>SectionServlet</servlet-name>
+		<url-pattern>/section</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>TrainingServlet</servlet-name>
+		<url-pattern>/training</url-pattern>
+	</servlet-mapping>
+	
+
+	
+	
+	<jsp-config>
+		<taglib>
+			<taglib-uri>my-custom-tags-uri</taglib-uri>
+			<taglib-location>/WEB-INF/my-tags.tld</taglib-location>
+		</taglib>
+		<jsp-property-group>
+			<url-pattern>*.jsp</url-pattern>
+			<page-encoding>UTF-8</page-encoding>
+		</jsp-property-group>
+	</jsp-config>
+</web-app>
